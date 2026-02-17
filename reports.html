@@ -1,0 +1,26 @@
+<h2>Membership Report</h2>
+
+<table border="1">
+<tr>
+<th>Membership No</th>
+<th>Name</th>
+<th>Email</th>
+<th>Duration</th>
+<th>Status</th>
+<th>Expiry</th>
+</tr>
+
+{% for m in members %}
+<tr>
+<td>{{ m.membership_number }}</td>
+<td>{{ m.name }}</td>
+<td>{{ m.email }}</td>
+<td>{{ m.duration }}</td>
+<td>{{ m.status }}</td>
+<td>{{ m.expiry_date }}</td>
+</tr>
+{% endfor %}
+</table>
+
+<br>
+<a href="/admin_dashboard">Back</a>
